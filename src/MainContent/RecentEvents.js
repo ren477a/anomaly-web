@@ -15,7 +15,6 @@ class RecentEvents extends React.Component {
 
   handleAddItem(item) {
     let events = this.state.events;
-    console.log(item)
     events.splice(0, 0, item);
     
 
