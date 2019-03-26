@@ -17,7 +17,7 @@ function NavBar() {
         </div>
 
         <div className="navbar-end">
-          <Link className="navbar-item" to="#">
+          <Link className="navbar-item" to="/login">
             Dave Martinez
           </Link>
         </div>

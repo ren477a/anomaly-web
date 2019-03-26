@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function IncidentSearch() {
   return (
@@ -17,7 +17,7 @@ function IncidentSearch() {
         <div className="card-content">
           <div className="content">
             <div className="control has-icons-left has-icons-right">
-              <input className="input is-large" type="text" placeholder="Enter Incident Number " />
+              <input className="input is-large" type="text" placeholder="Enter Incident Number or Type " />
               <span className="icon is-medium is-left"><i className="fa fa-search"></i></span>
             </div>
           </div>

@@ -4,7 +4,7 @@ import moment from 'moment'
 import RecentEvents from './RecentEvents';
 import IncidentSearch from './IncidentSearch';
 
-class  MainContent extends React.Component {
+class  Dashboard extends React.Component {
   constructor(props) {
     super(props)
 
@@ -42,4 +42,4 @@ class  MainContent extends React.Component {
   }
 }
 
-export default MainContent;
+export default Dashboard;
