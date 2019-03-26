@@ -22,7 +22,7 @@ class SideNav extends React.Component {
                 <NavLink to="/member">Manage Your Team</NavLink>
                 <ul>
                   <li><NavLink to="/member" activeClassName={this.activeClass} >Member List</NavLink></li>
-                  <li><NavLink to="#">Add a New Member</NavLink></li>
+                  <li><NavLink to="/addmember" activeClassName={this.activeClass}>Add a New Member</NavLink></li>
                 </ul>
               </li>
             </ul>

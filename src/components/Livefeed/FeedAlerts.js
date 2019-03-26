@@ -31,10 +31,10 @@ class FeedAlerts extends React.Component {
 
   render() {
     return (
-      <div class="box" style={{paddingTop: "5px"}}>
-        <article class="media">
-          <div class="media-content">
-            <div class="content">
+      <div className="box" style={{paddingTop: "5px"}}>
+        <article className="media">
+          <div className="media-content">
+            <div className="content">
               <p >
                 <strong className="is-size-3">{ this.state.time }</strong> 
                 <br />

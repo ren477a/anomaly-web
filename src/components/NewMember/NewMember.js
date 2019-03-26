@@ -1,8 +1,8 @@
 import React from 'react';
 
-import IncidentTable from './IncidentTable';
+import NewMemberForm from './NewMemberForm';
 
-class Incident extends React.Component {
+class Member extends React.Component {
   render() {
     return (
       <div className="column is-9">
@@ -10,24 +10,23 @@ class Incident extends React.Component {
           <div className="hero-body">
             <div className="container">
               <h1 className="title">
-                Incident List
+                Team Management
               </h1>
               <h2 className="subtitle">
-                Incident List and Detail
+                Add a New Users
               </h2>
             </div>
           </div>
         </section>
 
-        <div className="columns" style={{paddingTop: "20px"}}>
-          <IncidentTable />
-        </div>
 
-        
+        <div className="columns" style={{paddingTop: "20px"}}>
+          <NewMemberForm />
+        </div>
         
       </div>
     )
   }
 }
 
-export default Incident;
+export default Member;

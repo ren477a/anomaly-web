@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 
 import NavBar from './components/NavBar/NavBar';
@@ -10,6 +10,10 @@ import Incident from './components/Incident List/Incident';
 import Livefeed from './components/Livefeed/Livefeed';
 import Report from './components/ReportList/ReportList';
 import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
+import requireAuth from './utils/requireAuth';
+import FlashMessagesList from './components/FlashMessage/FlashMessageList';
+import NewMember from './components/NewMember/NewMember';
 
 
 const DefaultLayout = ({component: Component, ...rest}) => {
@@ -32,18 +36,21 @@ const DefaultLayout = ({component: Component, ...rest}) => {
 class App extends Component {
   render() {
     return (
-      <Router>
-        
-        <Route exact path="/login" component={Login} />
-    
-        <DefaultLayout exact path="/" component={Dashboard} /> 
-        <DefaultLayout path="/dashboard" component={Dashboard} />
-        <DefaultLayout path="/member" component={Member} />
-        <DefaultLayout path="/livefeed" component={Livefeed} />
-        <DefaultLayout path="/incident" component={Incident} />
-        <DefaultLayout path="/report" component={Report} />
+      <div>
+        {/* <FlashMessagesList /> */}
 
-      </Router>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
+
+        <DefaultLayout exact path="/" component={requireAuth(Dashboard)} /> 
+        <DefaultLayout path="/dashboard" component={requireAuth(Dashboard)} />
+        <DefaultLayout path="/member" component={requireAuth(Member)} />
+        <DefaultLayout path="/addmember" component={requireAuth(NewMember)} />
+        <DefaultLayout path="/livefeed" component={requireAuth(Livefeed)} />
+        <DefaultLayout path="/incident" component={requireAuth(Incident)} />
+        <DefaultLayout path="/report" component={requireAuth(Report)} />
+
+      </div>
     );
   }
 }

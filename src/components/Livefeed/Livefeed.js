@@ -1,7 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
-import IncidentTable from './FeedAlerts';
 import Camerafeed from './Camerafeed';
 import FeedAlerts from './FeedAlerts';
 
