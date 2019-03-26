@@ -9,8 +9,21 @@ import { logout } from '../../actions/authActions';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    
+    this.state = {
+      logoutHover: ""
+    };
 
     this.logOutOnClick = this.logOutOnClick.bind(this);
+    this.hoverOn = this.hoverOn.bind(this);
+    this.hoverOff = this.hoverOff.bind(this);
+  }
+
+  hoverOn(){
+    this.setState({ logoutHover: "is-active" });
+  }
+  hoverOff(){ 
+    this.setState({ logoutHover: "" });
   }
 
   logOutOnClick() {
@@ -36,9 +49,23 @@ class NavBar extends React.Component {
           </div>
   
           <div className="navbar-end">
-            <Link className="navbar-item" to="#" onClick={this.logOutOnClick}>
-              { this.props.user.username }
-            </Link>
+            
+            <div className={`navbar-item has-dropdown ${ this.state.logoutHover }`}
+              onMouseEnter={this.hoverOn} 
+              onMouseLeave={this.hoverOff}>
+
+              <Link className="navbar-link" to="#">
+                { this.props.user.username }
+              </Link>
+
+              <div className="navbar-dropdown">
+                <Link className="navbar-item" to="#" onClick={this.logOutOnClick}>
+                Logout
+                </Link>
+              </div>
+            </div>
+
+            
           </div>
         </div>
       </nav>
