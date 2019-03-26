@@ -21,7 +21,9 @@ class Member extends React.Component {
 
 
         <div className="columns" style={{paddingTop: "20px"}}>
-          <NewMemberForm />
+          <div className="column is-full">
+            <NewMemberForm />
+          </div>
         </div>
         
       </div>

@@ -31,7 +31,7 @@ class FeedAlerts extends React.Component {
 
   render() {
     return (
-      <div className="box" style={{paddingTop: "5px"}}>
+      <div className="box" style={{marginTop:"0px"}}>
         <article className="media">
           <div className="media-content">
             <div className="content">

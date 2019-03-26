@@ -2,6 +2,7 @@ import React from 'react';
 
 import Camerafeed from './Camerafeed';
 import FeedAlerts from './FeedAlerts';
+import LiveEvents from './LiveEvents';
 
 class Livefeed extends React.Component {
   render() {
@@ -25,7 +26,16 @@ class Livefeed extends React.Component {
             <Camerafeed />
           </div>
           <div className="column">
-            <FeedAlerts />
+            <div className="columns">
+              <div className="column is-full">
+                <FeedAlerts />
+              </div>
+            </div>
+            <div className="columns">
+              <div className="column is-full">
+                <LiveEvents />
+              </div>
+            </div>
           </div>
         </div>
       </div>
